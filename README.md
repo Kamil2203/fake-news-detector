@@ -18,6 +18,4 @@ Aplikacja webowa w Pythonie wykorzystująca model uczenia maszynowego do klasyfi
 python -m venv venv
 source venv/bin/activate     # lub .\venv\Scripts\activate na Windows
 
-## 📸 Przykładowy zrzut ekranu
-
-![Zrzut ekranu](static/img/zrzut.jpg)
+![Zrzut ekranu](https://raw.githubusercontent.com/Kamil2203/fake-news-detector/main/static/img/zrzut.jpg)
