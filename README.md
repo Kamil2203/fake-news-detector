@@ -2,7 +2,7 @@
 
 Aplikacja webowa w Pythonie wykorzystująca model uczenia maszynowego do klasyfikowania wiadomości jako **Fake** lub **True**.
 
-## 🧰 Technologie
+## 🇵🇱 Technologie
 
 - Python + Flask  
 - scikit-learn, pandas, nltk  
@@ -16,6 +16,8 @@ Aplikacja webowa w Pythonie wykorzystująca model uczenia maszynowego do klasyfi
 
 ```bash
 python -m venv venv
-source venv/bin/activate      # lub .\venv\Scripts\activate na Windows
+source venv/bin/activate     # lub .\venv\Scripts\activate na Windows
 
-![Zrzut ekranu aplikacji](https://raw.githubusercontent.com/Kamil2203/fake-news-detector/main/static/img/zrzut.jpg)
+## 📸 Przykładowy zrzut ekranu
+
+![Zrzut ekranu](static/img/zrzut.jpg)
