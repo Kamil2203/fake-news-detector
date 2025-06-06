@@ -20,4 +20,4 @@ source venv/bin/activate      # lub .\venv\Scripts\activate na Windows
 
 ## 📸 Zrzut ekranu aplikacji
 
-![Zrzut ekranu aplikacji](static/img/zrzut.jpg)
+![Zrzut ekranu aplikacji](./static/img/zrzut.jpg)
