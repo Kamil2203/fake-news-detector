@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Historia sprawdzeń</title>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+    <h2>Historia sprawdzonych wiadomości:</h2>
+    <table border="1" cellspacing="0" cellpadding="6">
+        <tr>
+            <th>Wiadomość</th>
+            <th>Wynik</th>
+            <th>Pewność</th>
+            <th>Czas</th>
+        </tr>
+        {% for msg, pred, conf, ts in logs %}
+        <tr>
+            <td>{{ msg }}</td>
+            <td>{{ pred }}</td>
+            <td>{{ conf }}%</td>
+            <td>{{ ts }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Wróć do formularza</a>
+</body>
+</html>

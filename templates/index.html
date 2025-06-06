@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake News Detector</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("{{ url_for('static', filename='img/background.png') }}") no-repeat center center fixed;
+
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 80px auto;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 40px #00f0ff88;
+      backdrop-filter: blur(6px);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      resize: vertical;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ffff33;
+    }
+
+    input[type="submit"] {
+      background-color: #00ffc3;
+      border: none;
+      color: black;
+      padding: 10px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 12px #00ffc3aa;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00bfa6;
+      box-shadow: 0 0 18px #00ffd5cc;
+      transform: scale(1.05);
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 0 0 6px #ffffffaa;
+    }
+
+    a {
+      margin-top: 20px;
+      display: inline-block;
+      color: #00ffff;
+      text-decoration: none;
+      text-shadow: 0 0 6px #00ffffaa;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Wklej wiadomość do analizy:</h2>
+    <form method="POST">
+      <textarea name="message" rows="6" placeholder="Wpisz wiadomość (minimum 5 słów)..."></textarea><br>
+      <input type="submit" value="Sprawdź">
+    </form>
+
+    {% if result %}
+      <div class="result">Wynik: {{ result }}</div>
+    {% endif %}
+
+    <a href="/historia">Zobacz historię sprawdzeń</a>
+  </div>
+</body>
+</html>
